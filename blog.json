@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "poster": "./blogs/img/delhi_floods",
+        "title": "Delhi Floods: A Wake-Up Call",
+        "description": "The recent floods in Delhi have caused widespread damage and displacement, and have raised questions about the city's preparedness for future flooding events...",
+        "read": "./blogs/abhinav.html"
+    },
+    {
+        "id": 2,
+        "poster": "./blogs/img/odisha_train_Accident.webp",
+        "title": "Odisha Train Tragedy",
+        "description": "According to officials and witnesses, the train accident occurred within an estimated 10-minute timeframe, located in the midst of farm fields in the Balasore district and resulted in the eruption of shrapnel and personal objects strewn across the tracks....",
+        "read": "./blogs/alexis.html"
+    },
+    {
+        "id": 3,
+        "poster": "./blogs/img/turkey_quake.jpeg",
+        "title": "2023 Turkey-Syria Earthquake",
+        "description": "On Feb. 6, a magnitude 7.8 earthquake occurred in southern Turkey near the northern border of Syria. This quake was followed approximately nine hours later by a magnitude 7.5 earthquake located around 59 miles (95 kilometers) to the southwest.....",
+        "read": "./blogs/anuran.html"
+    },
+    {
+        "id": 4,
+        "poster": "./blogs/img/california_fire.jpg",
+        "title": "California Fires: The Human Cost",
+        "description": "California is no stranger to wildfires. In fact, the state has experienced more than 10,000 wildfires in the past year alone. These fires have caused billions of dollars in damage and claimed the lives of dozens of people....",
+        "read": "./blogs/arvind.html"
+    }
+    
+    
+]

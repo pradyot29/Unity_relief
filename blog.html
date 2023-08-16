@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./introSection.css">
+  <link rel="stylesheet" href="./navbar.css">
+  <link rel="stylesheet" href="./mobileView.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/Images/logo.ico">
+  <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="/PetMe/Assets/Images/logo.jpg">
+  <title>Blogs</title>
+</head>
+
+<body>
+  <header
+    class="header text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center lg:justify-around"
+    id="header">
+    <div class="flex flex-row items-center md:flex-row md:items-center p-2" id="logo">
+      
+      <a class="logo-border" href="index.html">
+        <img class="rounded-full logo-size" src="./Unity relief logo.png" alt="logo" />
+      </a>
+      <span class="mission-2 mission-dark"> Unity Relief</span>
+    </div>
+    <button data-collapse-toggle="navbar-default" type="button"
+      class="absolute top-4 right-4 sm:inline-flex sm:items-center p-2 lg:hidden focus:outline-none  text_4 "
+      aria-controls="navbar-default" aria-expanded="false" id="nav-button">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <nav class="">
+      <div class="hidden w-full lg:block z-2" id="navbar">
+        <ul class="w-[100vw] h-1/2 top-0 right-0 p-8 lg:p-4 mt-12 lg:mt-0 text-center text-base lg:text-lg space-y-4 lg:space-y-0 lg:space-x-5 lg:static lg:w-auto flex flex-col rounded-lg items-start lg:items-center lg:bg-transparent lg:border-0 lg:flex-row justify-between">
+        <li>
+          <a href="./index.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Home</a>
+        </li>
+        <li>
+          <a href="./index.html#About" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">About Us</a>
+        </li>
+        <li>
+          <a href="./index.html#meet" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">View Organizations</a>
+        </li>
+        <li>
+          <a href="./news.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">News</a>
+        </li>
+        <li>
+          <a href="./blog.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Blogs</a>
+        </li>
+        <li>
+          <a href="./donate.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Register</a>
+        </li>
+        <li>
+          <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+          <a @mouseover="open = true" class="text-custom-heading flex font-bold hover:underline underline-offset-4 turn-red-hover navbar-item w-full">
+            Support Us
+            <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mt-1">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div x-show="open" class="z-20 absolute -left-1 w-[7.5rem] py-2 bg-gray-100 rounded-md shadow-xl">
+            <a href="volunteer.html" class="block px-4 py-2 text-base text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">Become a Volunteer</a>
+            <a href="adopt.html" class="block px-4 py-2 text-base text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">Donate</a>
+          </div>
+          </div>
+        </li>
+        <li>
+          <a href="./reportstary.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Emergency Help</a>
+        </li>
+        <li>
+          <a href="./index.html#contact">
+          <button class="inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-base px-2 focus:outline-none text_4 font-bold rounded text-base mt-4 md:mt-0">
+            Contact Us
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          </a>
+        </li>
+        <li>
+          <a id="theme-toggle">
+          <img src="Assets/Images/sun.svg" width="50px" id="switch"/>
+          </a>
+        </li>
+        <!-- google translate -->
+        <div id="google_translate_element">
+          <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        </ul>
+      </div>
+      </nav>
+
+  </header>
+
+ 
+
+  <!---Blogs container-->
+  <section class="main-body-section">
+    <div class="container max-w-5xl mx-auto">
+      <img src="./Unity relief cover.png" class="mt-32 "><br><br>
+      <h1 class="xl:-mt-7 mb-2 text-black text-4xl leading-tight font-bold text-center w-full">
+        Blogs
+      </h1>
+      <p class="text-center w-full bold text-amber-900 "><b>A Blog For Charity Lovers And Their Stories</b></p>
+    </div>
+
+
+
+    <!---Blogs card-->
+    <div class="relative flex flex-wrap items-center justify-center grid-cols-1 mx-0 z-2 my-7" id="data-output">
+
+
+
+    </div>
+  </section>
+
+   <!-- back to top button -->
+   <li>
+    <a href="#top">
+      <button id="bttbutton" title="backtotop">
+        <img src="Assets/Images/uparrow.png" width="20" height="25" />
+      </button>
+    </a>
+  </li>
+
+  <!--end of back to top button -->
+  
+  <footer class="bg-black text-white shadow-inner pt-4 pb-8">
+		<div class="flex p-5 justify-between">
+			<div
+				class="flex flex-1 flex-col text-center sm:flex-row items-center justify-center space-x-3"
+			>
+				<div>
+					<a href="#top">
+						<img
+							class="rounded-full w-24 cursor-pointer"
+							src="./Unity relief logo.png"
+							alt="logo"
+						/>
+					</a>
+				</div>
+				<div>
+					<div class="space-y-2">
+						<h3 class="text-2xl">Unity Relief</h3>
+						<div>Together we can heal</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Subscribe column -->
+			<div class="md:flex flex-col hidden text-center items-center flex-1">
+				<div class="space-y-2">
+					<h3 class="text-2xl">Subscribe to our newsletter</h3>
+					<div class="text-md">
+						Get the latest news and updates delivered straight to your inbox.
+					</div>
+					<div class="text-center">
+						<input
+							class="my-1 mr-2 p-2 rounded-md text-black"
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Enter your email address"
+						/>
+						<button
+							class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+							type="submit"
+						>
+							Subscribe
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- Subscribe column end -->
+
+			<!-- Social icons  -->
+			
+
+
+			<!-- Scroll to top -->
+			<div class="md:pr-8 hover-effect">
+				<a href="#top">
+					<button id="bttbutton" title="backtotop">
+						<img src="./image.svg" class="w-6 md:w-10 md:object-left"/>
+					</button>
+				</a>
+			</div>
+			<!-- Scroll to top -->
+
+			
+
+		</div>
+
+		<div
+			class="pt-5 pb-8 flex flex-col text-center md:hidden mt-8 items-center flex-1"
+		>
+			<div class="space-y-2">
+				<h3 class="text-2xl text-center">Subscribe to our newsletter</h3>
+				<div class="text-md">
+					Get the latest news and updates delivered straight to your inbox.
+				</div>
+				<div class="text-center">
+					<input
+						class="my-1 mr-2 p-2 rounded-md"
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Enter your email address"
+							   style="color: black"
+
+					/>
+					<button
+						class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+						type="submit"
+					>
+						Subscribe
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<p>Copyright &copy; 2023 [The Optimists] All Right Reserved.</p>
+		</div>
+	</footer>
+  <script src="index.js"></script>
+  <script src="light-dark-theme.js"></script>
+  <script src="blog.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

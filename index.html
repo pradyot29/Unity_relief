@@ -1,0 +1,860 @@
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+		<link rel="manifest" href="./site.webmanifest" />
+		<link rel="stylesheet" href="./output.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./introSection.css" />
+		<link rel="stylesheet" href="./navbar.css" />
+		<link rel="stylesheet" href="./mobileView.css" />
+	
+		<link rel="shortcut icon" type="image/x-icon" href="./Unity relief logo.png">
+		<script
+			defer
+			src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"
+		></script>
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<title>Unity Relief</title>
+	</head>
+
+	<body>
+		<header
+			class="header text-gray-400 bg-header-offwhite body-font flex flex-row items-center justify-center lg:justify-around"
+			id="header"
+		>
+			<div
+				class="flex flex-row items-center md:flex-row md:items-center p-2"
+				id="logo"
+			>
+			
+				<a class="logo-border" href="index.html">
+					<img
+						class="rounded-full logo-size"
+						src="./Unity relief logo.png"
+						alt="logo"
+					/>
+				</a>
+				<span class="mission-2 mission-dark"> Unity Relief </span>
+				<!--
+      <div class="w-full mt-8 md:mt-0">
+        <h1 class="text-4xl text_2  text-center md:text-left md:ml-12 uppercase font-serif font-bold " id = "heading-adopt-me">Adopt
+          today!</h1>
+        <p class="text-lg text-gray-400 text-center md:text-left md:ml-12 mt-2">Give life to a needed animal</p>
+      </div> -->
+			</div>
+			<button
+				data-collapse-toggle="navbar-default"
+				type="button"
+				class="absolute top-4 right-4 sm:inline-flex sm:items-center p-2 lg:hidden focus:outline-none text_4"
+				aria-controls="navbar-default"
+				aria-expanded="false"
+				id="nav-button"
+			>
+				<span class="sr-only">Open main menu</span>
+				<svg
+					class="w-6 h-6"
+					aria-hidden="true"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+						clip-rule="evenodd"
+					></path>
+				</svg>
+			</button>
+			<nav class="">
+				<div class="hidden w-full lg:block z-2" id="navbar">
+				  <ul class="w-[100vw] h-1/2 top-0 right-0 p-8 lg:p-4 mt-12 lg:mt-0 text-center text-base lg:text-lg space-y-4 lg:space-y-0 lg:space-x-5 lg:static lg:w-auto flex flex-col rounded-lg items-start lg:items-center lg:bg-transparent lg:border-0 lg:flex-row justify-between">
+					<li>
+						<a href="index.html" class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item" style>Home</a>
+					  </li>
+					<li>
+					  <a href="#meet" class="p-3 text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item" style>View Organizations</a>
+					</li>
+					<li>
+					  <a href="#About" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">About Us</a>
+					</li>
+					<li>
+					  <a href="./news.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Latest News</a>
+					</li>
+					<li>
+					  <a href="./blog.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Blogs</a>
+					</li>
+					<li>
+					  <a href="./donate.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Register</a>
+					</li>
+					<li>
+					  <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+						<a @mouseover="open = true" class="text-custom-heading flex font-bold hover:underline underline-offset-4 turn-red-hover navbar-item w-full">
+						  Support Us
+						  <svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mt-1">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+						  </svg>
+						</a>
+						<div x-show="open" class="z-20 absolute -left-1 w-[7.5rem] py-2 bg-gray-100 rounded-md shadow-xl">
+						  
+							<a href="volunteer.html" class="block px-4 py-2 text-base text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">Become a Volunteer</a>
+						    <a href="adopt.html" class="block px-4 py-2 text-base text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">Donate</a>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <a href="./reportstary.html" class="text-custom-heading font-bold hover:underline underline-offset-4 turn-red-hover navbar-item">Emergency Help</a>
+					</li>
+					<li>
+					  <a href="#contact">
+						<button class="inline-flex items-center bg-header-orange-light border-0 py-2 lg:py-2 text-choco text-base px-2 focus:outline-none text_4 font-bold rounded text-base mt-4 md:mt-0">
+						  Contact Us
+						  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						  </svg>
+						</button>
+					  </a>
+					</li>
+					<li>
+					  <a id="theme-toggle">
+						<img src="Assets/Images/sun.svg" width="50px" id="switch"/>
+					  </a>
+					</li>
+					<!-- google translate -->
+					<div id="google_translate_element">
+					  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					</div>
+				  </ul>
+				</div>
+			  </nav>
+			  
+		</header>
+		<section class="main-body-section">
+			
+		<div class="main-body-section-div  relative">
+			<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-43"></div>
+			<div class="heading-main-body">
+				<div class="main-body-heading-text z-10">
+					<h1 class="heading-main-body-h1"><span>Unity</span> Relief</h1>
+						<p>When disaster strikes,every second counts.<p>
+						
+				</div>
+			</div>
+		</div>
+
+		<!-- Scroll to top -->
+		<!-- <div class="md:pr-8">
+			<a href="#top">
+				<button id="bttbutton" title="backtotop">
+					<img alt="scroll-to-top-feature" src="./Assets/Images/uparrow.png"/>
+				</button>
+			</a>
+		</div> -->
+		<!-- Scroll to top -->
+		
+			<!-- SOS button -->
+			<div>
+				<form action="./reportstary.html" method="get" target="_blank">
+					<button id="mySBtn" title="SOS">Emergency Help</button>
+				</form>
+			</div>
+			<!--end of SOS button -->
+		</section>
+		<!-- About session  html starts from here -->
+
+		<section class="bg-white dark:bg-gray-900 b_1 shadow-2xl">
+			<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+				<p id="About"></p>
+				<h2
+					class="mb-8 text-7xl tracking-tight hover:underline underline-offset-4 turn-black-hover antialiased font-extrabold text-center text-gray-900 dark:text-white text_3" style="padding-top: 120px; padding-bottom: 25px;"
+				>
+				About Us
+				</h2>
+				<p
+				class="mb-8 lg:mb-16 font-light text-center text-gray-200 dark:text-gray-400 sm:text-2xl text_6"
+				>
+				Unity Relief is a groundbreaking platform and mobile app that aims to revolutionize disaster relief coordination. In the face of adversity, we believe in the power of unity and compassion. This innovative solution empowers individuals to donate, volunteer, and make a difference during times of crisis. The platform connects people to vital resources, such as nearby shelters, medical facilities, and relief centers, ensuring that help reaches the right places at the right time.
+
+Our mission is to create a community-driven ecosystem where solidarity thrives, and no one is left behind. By combining technology with empathy, we strive to bring hope to the darkest hours and turn disasters into opportunities for unity and resilience.
+				</p>
+			</div>
+		</section>
+
+		<!-- About Us section  html ends here -->
+	
+		
+
+		<section class="pet-card-flex">
+			<br>
+			<br>
+			<div>
+				<h1 class="m-heading hover:shadow-2xl antialiased hover:subpixel-antialiased" >Know our Registered Organizations</h1>
+			</div>
+			<br>
+
+			<div class="one-line-card" id="meet">
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet1.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h6 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								CRY (Child Rights and You)
+							</h6>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Education,Child Care</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1979</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>	Rippan Kapur</span>
+								</li>
+								
+								</li>
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>Mumbai</span>
+								</li>
+							</ul>
+							<a class="self-center pt-2" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img class="card-img-size" style="height: 320px; width: 330px;" src="./img/meet2.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Smile Foundation
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span> Education, Healthcare, Livelihood, Women Empowerment and Disaster response.</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>2002</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Santanu Mishra</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>New Delhi</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button></a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="one-line-card">
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet3.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Give India Foundation
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Online Donation</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1999</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Venkat Krishnan</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>Bengaluru</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">Donate</button></a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet4.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Goonj
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Education, Healthcare,</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1999</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Anshu Gupta</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>New Delhi</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="one-line-card">
+				<div class="main-card card-height">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet5.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Care India
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Education, Healthcare, Livelihood, Gender, Water, Sanitation</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1946</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Lincoln Clark</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>Uttar Pradesh</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button></a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet6.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Nanhi Kali
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+								
+									<span>Education</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1996</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Anand Mahindra</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>Mumbai</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button></a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="one-line-card">
+				<div class="main-card card-height">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg max-w-xs card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet7.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text shadow-xl">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Helpage India
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Education, Healthcare, Livelihood, Water, Sanitation,</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1978</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Mr Jackson Cole, Samson Daniel</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>New Delhi</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="main-card card-height shadow-2xl">
+					<div class="main-img">
+						<div class="hv rounded-lg shadow-lg card-img-div">
+							<a href="#">
+								<img
+									class="card-img-size"
+									src="./img/meet8.jpg"
+									alt=""
+								/>
+							</a>
+						</div>
+					</div>
+					<div class="main-text">
+						<div class="p-4 flex flex-col gap-2">
+							<h5 class="text_3 md:text-[40px] font-bold mb-2 text-center">
+								Pratham
+							</h5>
+							<ul class="grid grid-cols-2 gap-5 text_4">
+								<li class="flex gap-2 text-xl justify-self-center">
+									
+									<span>Education</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>1994</span>
+								</li>
+								<li class="flex text-xl justify-self-center">
+									<span>Madhav Chavan, Farida Lambay</span>
+								</li>
+								
+								<li class="flex gap-2 text-xl justify-self-center">
+									<img
+										class="w-5 icon h-auto"
+										src="Assets/Images/loation-icon.svg"
+										alt=""
+									/>
+									<span>New Delhi</span>
+								</li>
+							</ul>
+							<a class="self-center" href="adopt.html">
+								<button type="button" class="hover-button">Donate</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+        <!-- style="opacity: 0; transform: translateX(50px); transition: opacity 1s ease, transform 1s ease;"   -->
+		<!--     Contact us section html starts from here -->
+	    <section id="contact" class="dark:bg-gray-900 b_1 pt-40 pb-20"> 	
+			<div
+			  class="w-full contact-form-container mx-auto max-w-screen-md"
+			  id="contactFormContainer"	
+			>
+			  <form
+				action="https://formspree.io/f/xayaokzl"
+				method="POST"
+				class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 px-8 pt-8 pb-10"
+			  >
+				<p id="contact"></p>
+				<h2 class="text-3xl mt-1 mb-2 text-center bold-500 text_3">
+				  CONTACT US
+				</h2>
+				<p class="text-base text-center text_3">
+				  Any issues! Fill the form below and our team will contact you shortly.
+				</p>
+				<br />
+				<div class="mb-4">
+				  <label
+					class="block text-white text-sm font-bold mb-2"
+					for="contact_nom"
+				  >
+					Name
+				  </label>
+				  <input
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+					id="contact_nom"
+					name="contact_nom"
+					type="text"
+					placeholder="Name"
+				  />
+				</div>
+				<div class="mb-6">
+				  <label
+					class="block text-white text-sm font-bold mb-2"
+					for="contact_email"
+				  >
+					Email
+				  </label>
+				  <input
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+					id="contact_email"
+					name="contact_email"
+					type="email"
+					required
+					placeholder="hello@petme"
+				  />
+				</div>
+				<div class="mb-6">
+				  <label
+					for="contact_message"
+					class="block text-white text-sm font-bold mb-2"
+					>Message</label
+				  >
+				  <textarea
+					class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+					id="contact_message"
+					name="contact_message"
+					required
+					rows="6"
+					placeholder="Your message"
+				  ></textarea>
+				</div>
+				<div class="flex justify-center">
+				  <button
+					class="bg-gray-800 hover:bg-gray-900 text-center text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+					type="submit"
+				  >
+					Contact Us
+				  </button>
+				</div>
+			  </form>
+			</div>
+		  </section>
+		  
+		  <script>
+			window.addEventListener("scroll", function () {
+			  var contactFormContainer = document.getElementById("contactFormContainer");
+			  var scrollPosition = window.scrollY + window.innerHeight;
+			  var contactFormOffset = contactFormContainer.offsetTop;
+		  
+			  if (scrollPosition > contactFormOffset) {
+				contactFormContainer.style.opacity = "1";
+				contactFormContainer.style.transform = "translateX(0)";
+			  }
+			});
+		  </script>
+		  
+		<!-- <section class="dark:bg-gray-900 b_1 pt-20 pb-20">
+			<div class="w-full contact-form-container mx-auto max-w-screen-md">
+				<form
+					action="https://formspree.io/f/xayaokzl"
+					method="POST"
+					class="bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 px-8 pt-6 pb-8"
+				>
+					<p id="contact"></p>
+					<h2 class="text-3xl mt-1 mb-2 text-center bold-500 text_3">
+						CONTACT US
+					</h2>
+					<p class="text-base text-center text_3">
+						Any issues! Fill the form below and our team will contact you
+						shortly.
+					</p>
+					<br />
+					<div class="mb-4">
+						<label
+							class="block text-white text-sm font-bold mb-2"
+							for="contact_nom"
+						>
+							Name
+						</label>
+						<input
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+							id="contact_nom"
+							name="contact_nom"
+							type="text"
+							placeholder="Name"
+						/>
+					</div>
+					<div class="mb-6">
+						<label
+							class="block text-white text-sm font-bold mb-2"
+							for="contact_email"
+						>
+							Email
+						</label>
+						<input
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+							id="contact_email"
+							name="contact_email"
+							type="email"
+							required
+							placeholder="hello@petme"
+						/>
+					</div>
+					<div class="mb-6">
+						<label
+							for="contact_message"
+							class="block text-white text-sm font-bold mb-2"
+							>Message</label
+						>
+						<textarea
+							class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:shadow-outline"
+							id="contact_message"
+							name="contact_message"
+							required
+							rows="6"
+							placeholder="Your message"
+						></textarea>
+					</div>
+					<div class="flex justify-center">
+						<button
+							class="bg-gray-800 hover:bg-gray-900 text-center text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+							type="submit"
+						>
+							Contact Us
+						</button>
+					</div>
+				</form>
+			</div>
+		</section> -->
+
+		<!--     Contact us section html ends here -->
+
+		<footer class="bg-black text-white shadow-inner pt-4 pb-8">
+			<div class="flex p-5 justify-between">
+				<div
+					class="flex flex-1 flex-col text-center sm:flex-row items-center justify-center space-x-3"
+				>
+					<div>
+						<a href="#top">
+							<img
+								class="rounded-full w-24 cursor-pointer"
+								src="./Unity relief logo.png"
+								alt="logo"
+							/>
+						</a>
+					</div>
+					<div>
+						<div class="space-y-2">
+							<h3 class="text-2xl">Unity Relief</h3>
+							<div>Together we can heal</div>
+						</div>
+					</div>
+				</div>
+	
+				<!-- Subscribe column -->
+				<div class="md:flex flex-col hidden text-center items-center flex-1">
+					<div class="space-y-2">
+						<h3 class="text-2xl">Subscribe to our newsletter</h3>
+						<div class="text-md">
+							Get the latest news and updates delivered straight to your inbox.
+						</div>
+						<div class="text-center">
+							<input
+								class="my-1 mr-2 p-2 rounded-md text-black"
+								type="email"
+								id="email"
+								name="email"
+								placeholder="Enter your email address"
+							/>
+							<button
+								class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+								type="submit"
+							>
+								Subscribe
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Subscribe column end -->
+	
+				<!-- Social icons  -->
+				
+	
+	
+				<!-- Scroll to top -->
+				<div class="md:pr-8 hover-effect">
+					<a href="#top">
+						<button id="bttbutton" title="backtotop">
+							<img src="./image.svg" class="w-6 md:w-10 md:object-left"/>
+						</button>
+					</a>
+				</div>
+				<!-- Scroll to top -->
+	
+				
+	
+			</div>
+	
+			<div
+				class="pt-5 pb-8 flex flex-col text-center md:hidden mt-8 items-center flex-1"
+			>
+				<div class="space-y-2">
+					<h3 class="text-2xl text-center">Subscribe to our newsletter</h3>
+					<div class="text-md">
+						Get the latest news and updates delivered straight to your inbox.
+					</div>
+					<div class="text-center">
+						<input
+							class="my-1 mr-2 p-2 rounded-md"
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Enter your email address"
+								   style="color: black"
+	
+						/>
+						<button
+							class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md"
+							type="submit"
+						>
+							Subscribe
+						</button>
+					</div>
+				</div>
+			</div>
+			<div id="copyright">
+				<p>Copyright &copy; 2023 [The Optimists] All Right Reserved.</p>
+			</div>
+		</footer>
+
+		
+		<script>
+			// Add this JavaScript code to trigger the animation when meet cards come into view
+			window.addEventListener("scroll", function () {
+			const meetCards = document.querySelectorAll(".main-card");
+			const scrollPosition = window.scrollY + window.innerHeight;
+
+			meetCards.forEach((card) => {
+				const cardOffset = card.offsetTop;
+				if (scrollPosition > cardOffset) {
+				card.style.opacity = "1";
+				card.style.transform = "translateY(0)";
+				}
+			});
+			});
+
+		</script>
+		<script>
+			// Add this JavaScript code to trigger the animation when About content comes into view
+window.addEventListener("scroll", function () {
+  const aboutSection = document.querySelector("#about");
+  const aboutContent = aboutSection.querySelector(".fade-in");
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const contentOffset = aboutContent.offsetTop;
+
+  if (scrollPosition > contentOffset) {
+    aboutContent.style.opacity = "1";
+    aboutContent.style.transform = "translateY(0)";
+  }
+});
+
+		</script>
+		<script src="index.js"></script>
+		<script src="navbar.js"></script>
+		<script src="light-dark-theme.js"></script>
+	</body>
+</html>
